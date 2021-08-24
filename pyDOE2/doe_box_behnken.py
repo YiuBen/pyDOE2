@@ -86,6 +86,6 @@ def bbdesign(n, center=None):
         else:
             center = n
         
-    H = np.c_[H.T, repeat_center(n, center).T].T
+    H = np.r_[H, repeat_center(n, center)]
     
     return H
